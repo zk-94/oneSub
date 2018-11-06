@@ -1,0 +1,182 @@
+<!-- <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="<%=basePath%>">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+
+    <link rel="stylesheet" href="oneSub.css"> <!-- css/webh5/ -->
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <!-- <script type="text/javascript" src="js/jquery/jquery-3.2.1.min.js"></script> -->
+    <script type="text/javascript" src="flexible.js"></script><!-- js/webh5/ -->
+    <title>每日一题</title>
+    
+</head>
+<body>
+     <div class="content">
+        <!-- 顶部标题 -->
+        <div class="top-cont">
+            <h3 class="title">博远教育每日一题博远教育每日一题博远教育每日一题</h3>
+        </div>
+        <!-- 题目信息 -->
+        <div class="mid-cont">
+            <!-- 机构信息 -->
+            <div class="ins-info clearfix">
+                <div class="ins-img fl-lf"><img src="images/touxiang.png" alt=""></div>
+                <div class="ins-text fl-lf">
+                    <p class="ins-tit">博远教育</p>
+                    <p class="ins-lab">吉他/尤克里里/电吉他/舞蹈/武术</p>
+                </div>
+                <div class="ins-idx fl-rgt"><a href="#">访问主页</a></div>
+            </div>
+            <div class="sub-cont">
+                <ul class="sub-ul">
+                    <li class="sub-li">
+                        <!-- 题目信息 -->
+                        <div class="sub-title clearfix">
+                            <h4 class="sub-tit fl-lf">【三年级】加减巧算</h4>
+                            <img src="images/insphoto.png" alt="" class="fl-rgt">
+                        </div>
+                        <!-- 题目内容 -->
+                        <div class="sub-det">
+                            <p class="sub-txt">在一根绳子上依次穿2个红珠、2个白珠、5个黑珠，并按此方式反复，如果从头开始数，直到第50颗，那么其中白珠有多少颗?</p>
+                            <div class="sub-img">
+                                <img src="images/subimg.jpg" alt="">
+                                <img src="images/subimg.jpg" alt="">
+                                <img src="images/subimg.jpg" alt="">
+                            </div>
+                            <div class="check" onclick="showTips(this)"></div>
+                            <!-- 题目答案 -->
+                            <div class="sub-ans">
+                                <div class="ans-tit"><img src="images/daan_ico.png" alt="">答案及解题思路：</div>
+                                <p class="ans-txt">
+                                已知每张桌子比每把椅子贵30元，如果桌子的单价与椅子同样多，那么总价就应减少30×6元，这时的总价相当于（6+5）把椅子的价钱，由此可求每把椅子的单价，再求每张桌子的单价。
+                                解：每把椅子的价钱：<br>
+                                （455-30×6）÷（6+5）<br>
+                                =（455- 180）÷11<br>
+                                =275÷11<br>
+                                =25（元）<br>
+                                每张桌子的价钱：<br>
+                                25+30=55（元）<br>
+                                答：每张桌子55元，每把椅子25元。<br>
+                                </p>
+                                <div class="sub-img">
+                                    <img src="images/subimg.jpg" alt="">
+                                    <img src="images/subimg.jpg" alt="">
+                                    <img src="images/subimg.jpg" alt="">
+                                </div>
+                                <div class="close" onclick="closeAns(this)"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="sub-li">
+                        <!-- 题目信息 -->
+                        <div class="sub-title clearfix">
+                            <h4 class="sub-tit fl-lf">【三年级】加减巧算</h4>
+                            <img src="images/insphoto.png" alt="" class="fl-rgt">
+                        </div>
+                        <!-- 题目内容 -->
+                        <div class="sub-det">
+                            <p class="sub-txt">在一根绳子上依次穿2个红珠、2个白珠、5个黑珠，并按此方式反复，如果从头开始数，直到第50颗，那么其中白珠有多少颗?</p>
+                            <div class="sub-img">
+                                <img src="images/subimg.jpg" alt="">
+                                <img src="images/subimg.jpg" alt="">
+                                <img src="images/subimg.jpg" alt="">
+                            </div>
+                            <div class="check" onclick="showTips(this)"></div>
+                            <!-- 题目答案 -->
+                            <div class="sub-ans">
+                                <div class="ans-tit"><img src="images/daan_ico.png" alt="">答案及解题思路：</div>
+                                <p class="ans-txt">
+                                已知每张桌子比每把椅子贵30元，如果桌子的单价与椅子同样多，那么总价就应减少30×6元，这时的总价相当于（6+5）把椅子的价钱，由此可求每把椅子的单价，再求每张桌子的单价。
+                                解：每把椅子的价钱：<br>
+                                （455-30×6）÷（6+5）<br>
+                                =（455- 180）÷11<br>
+                                =275÷11<br>
+                                =25（元）<br>
+                                每张桌子的价钱：<br>
+                                25+30=55（元）<br>
+                                答：每张桌子55元，每把椅子25元。<br>
+                                </p>
+                                <div class="sub-img">
+                                    <img src="images/subimg.jpg" alt="">
+                                    <img src="images/subimg.jpg" alt="">
+                                    <img src="images/subimg.jpg" alt="">
+                                </div>
+                                <div class="close" onclick="closeAns(this)"></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="sub-li">
+                        <!-- 题目信息 -->
+                        <div class="sub-title clearfix">
+                            <h4 class="sub-tit fl-lf">【三年级】加减巧算</h4>
+                            <img src="images/insphoto.png" alt="" class="fl-rgt">
+                        </div>
+                        <!-- 题目内容 -->
+                        <div class="sub-det">
+                            <p class="sub-txt">在一根绳子上依次穿2个红珠、2个白珠、5个黑珠，并按此方式反复，如果从头开始数，直到第50颗，那么其中白珠有多少颗?</p>
+                            <div class="sub-img">
+                                <img src="images/subimg.jpg" alt="">
+                                <img src="images/subimg.jpg" alt="">
+                                <img src="images/subimg.jpg" alt="">
+                            </div>
+                            <div class="check" onclick="showTips(this)"></div>
+                            <!-- 题目答案 -->
+                            <div class="sub-ans">
+                                <div class="ans-tit"><img src="images/daan_ico.png" alt="">答案及解题思路：</div>
+                                <p class="ans-txt">
+                                已知每张桌子比每把椅子贵30元，如果桌子的单价与椅子同样多，那么总价就应减少30×6元，这时的总价相当于（6+5）把椅子的价钱，由此可求每把椅子的单价，再求每张桌子的单价。
+                                解：每把椅子的价钱：<br>
+                                （455-30×6）÷（6+5）<br>
+                                =（455- 180）÷11<br>
+                                =275÷11<br>
+                                =25（元）<br>
+                                每张桌子的价钱：<br>
+                                25+30=55（元）<br>
+                                答：每张桌子55元，每把椅子25元。<br>
+                                </p>
+                                <div class="sub-img">
+                                    <img src="images/subimg.jpg" alt="">
+                                    <img src="images/subimg.jpg" alt="">
+                                    <img src="images/subimg.jpg" alt="">
+                                </div>
+                                <div class="close" onclick="closeAns(this)"></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- 底部机构信息 -->
+        <div class="foot-cont clearfix">
+            <div class="info-left fl-lf">
+                <p class="left-ins">金色音画少儿艺术培训中心</p>
+                <p class="left-lab">卡通画/水彩/油画/素描/卡通画/水彩画</p>
+                <p class="left-phe">电话：<span class="insPhone">18212345678</span></p>
+                <p class="left-add">地址：<span class="insAddress">北京市西城区西什库大街九思文创街道水云中小区9栋1102</span></p>
+            </div>
+            <div class="img-right fl-rgt"><img src="images/erweima.png" alt=""></div>
+        </div>
+        <div class="weilai clearfix">
+                <div class="line fl-lf"></div>
+                <div class="weilai-txt fl-lf">蔚来地图 · 蔚来一起学</div>
+                <div class="line fl-rgt"></div>
+            </div>
+        <div class="tips">
+            <div class="tip-cont">
+                <p class="tip-tit">提示</p>
+                <p class="tip-txt">您确定要查看答案及解题思路吗？</p>
+                <p class="tip-btn clearfix"><span class="close-btn fl-lf">取消</span><span class="enter-btn fl-rgt">确认</span></p>
+            </div>
+        </div>
+     </div>
+    <script type="text/javascript" src="oneSub.js"></script><!-- js/webh5/ -->
+</body>
+</html>
